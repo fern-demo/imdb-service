@@ -26,7 +26,7 @@ service:
             title: string
             rating: 
               type: double  
-              docs: The rating of the movie on a scale of 1 to 10
+              docs: The rating scale is one to five stars
       response: 
         docs: This endpoint returns a movie ID.
         type: MovieId
