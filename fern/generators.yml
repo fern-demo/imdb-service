@@ -1,0 +1,18 @@
+default-group: local
+groups:
+  local:
+    generators:
+      - name: fernapi/fern-typescript-express
+        version: 0.9.7
+        output:
+          location: local-file-system
+          path: ../src/api/generated
+        config:
+          outputSourceFiles: true
+  postman: 
+    generators:
+      - name: fernapi/fern-postman
+        version: 0.1.0
+        output:
+          location: local-file-system
+          path: ../postman
