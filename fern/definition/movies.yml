@@ -16,6 +16,7 @@ service:
   base-path: /movies
   endpoints:
     createMovie:
+      auth: true
       docs: Add a movie to the database
       method: POST
       path: /create-movie
