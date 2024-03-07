@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { register } from "./api/generated";
-import imdb from "./services/imdb";
+import movies from "./services/movie";
 
 const PORT = process.env.PORT ?? 8080;
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 register(app, {
-  imdb,
+  movies,
 });
 
 app.listen(PORT);

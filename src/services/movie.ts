@@ -1,8 +1,7 @@
-// this `FernApi` export is generated from your organization name in fern.config.json:
-import { FernApi } from "../api";
-import { ImdbService } from "../api/generated/api/resources/imdb/service/ImdbService";
+import { ImdbApi } from "../api";
+import { MoviesService } from "../api/generated/api/resources/movies/service/MoviesService";
 
-export default new ImdbService({
+export default new MoviesService({
   createMovie: (req, res) => {
     const id = req.body.title.toLowerCase().replaceAll(" ", "-");
 
@@ -18,7 +17,7 @@ export default new ImdbService({
         rating: 4.9,
       });
     } else {
-      throw new FernApi.MovieDoesNotExistError();
+      throw new ImdbApi.MovieDoesNotExistError();
     }
   },
 });

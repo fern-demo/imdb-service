@@ -26,6 +26,13 @@ service:
             title: string
             rating: double  
       response: MovieId
+      examples: 
+        - name: Create a movie
+          request: 
+            title: "The Shawshank Redemption"
+            rating: 4.5
+          response: 
+            body: "movie_1234"
 
     getMovie:
       method: GET
@@ -35,6 +42,15 @@ service:
       response: Movie
       errors:
         - MovieDoesNotExistError
+      examples: 
+        - name: Get a movie
+          path-parameters: 
+            movieId: "movie_1234"
+          response: 
+            body: 
+              id: "movie_1234"
+              title: "The Shawshank Redemption"
+              rating: 4.5
 
 errors:
   MovieDoesNotExistError:

@@ -1,3 +1,15 @@
 name: api
+auth: APIKey
+auth-schemes:
+  APIKey:
+    header: X-API-Key
+    name: apiKey
+    env: IMDB_API_KEY
+default-environment: Production
+environments:
+  Production: https://www.imdb.com
+  Sandbox:
+    docs: The sandbox is helpful to get started!
+    url: https://www.sandbox.imdb.com
 error-discrimination:
   strategy: status-code
