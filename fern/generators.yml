@@ -26,7 +26,7 @@ groups:
         #   token: ${NPM_TOKEN}
         github: 
           repository: "fern-demo/imdb-typescript"
-          # mode: pull-request
+          mode: pull-request
         config: 
           namespaceExport: Imdb
           allowCustomFetcher: true

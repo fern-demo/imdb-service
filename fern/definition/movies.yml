@@ -24,8 +24,12 @@ service:
         body: 
           properties: 
             title: string
-            rating: double  
-      response: MovieId
+            rating: 
+              type: double  
+              docs: The rating of the movie on a scale of 1 to 10
+      response: 
+        docs: This endpoint returns a movie ID.
+        type: MovieId
       examples: 
         - name: Create a movie
           request: 
@@ -39,7 +43,9 @@ service:
       path: /{movieId}
       path-parameters:
         movieId: MovieId
-      response: Movie
+      response: 
+        docs: This endpoint returns a movie.
+        type: Movie
       errors:
         - MovieDoesNotExistError
       examples: 

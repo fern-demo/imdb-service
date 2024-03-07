@@ -1,0 +1,28 @@
+instances:
+  - url: https://imdb.docs.buildwithfern.com
+title: IMDb | API Reference
+navigation:
+  - section: Introduction
+    contents:
+      - page: Getting started
+        path: ./pages/api.mdx
+  - api: API Reference
+    snippets: 
+      typescript: imdb
+colors:
+  accentPrimary: 
+    dark: '#ffc748'
+    light: '#ffc748'
+  background: 
+    dark: '#0e0e1a'
+    light: "#ffffff"
+logo: 
+  href: https://imdb.docs.buildwithfern.com
+  dark: assets/logo-dark.svg
+  light: assets/logo-light.svg
+  height: 30
+favicon: assets/favicon.png
+layout: 
+  # page-width: 1200px
+  page-width: 1504px
+  searchbar-placement: header
